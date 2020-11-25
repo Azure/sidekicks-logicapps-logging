@@ -1,15 +1,10 @@
-# Project
+# Sidekicks: LogicApps Logging
+This _Sidekick_ exposes an HTTP endpoint via LogicApps. The JSON payload of the POST request is then written to Azure Storage log files with a datetime stamp. This enables log aggregators (e.g. SIEM tools) to download these files. The log files are written in 1-minute increments.
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## Sidekicks
+_Sidekicks_ are projects built for real customers with real scenarios. Microsoft's Customer Success Unit works with customers to facilitate their adoption of the cloud and remove any potential barriers. Through working with various customers, we have recognized that many customers struggle with the same pain points. The _Sidekicks_ initiative is a collection of projects that have empowered customers to move forward in their cloud journeys. 
 
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
-
+All _Sidekick_ projects have been generalized and customer-specific data has been removed. _Sidekicks_ are provided without warranty and without support.
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
