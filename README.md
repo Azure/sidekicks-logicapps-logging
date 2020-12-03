@@ -1,6 +1,23 @@
 # Sidekicks: LogicApps Logging
 This _Sidekick_ exposes an HTTP endpoint via LogicApps. The JSON payload of the POST request is then written to Azure Storage log files with a datetime stamp. This enables log aggregators (e.g. SIEM tools) to download these files. The log files are written in 1-minute increments.
 
+## Configuration
+This _Sidekick_ utilizes Terraform and requires a minimum version of v0.14.0.
+
+The required Terraform variables are as follows:
+
+| Variable | Description |
+| -------- | ----------- |
+| subscriptionId        | The unique id of the Azure subscription |
+| tenantId              | The unique id of the Azure tenant |
+| region                | The targeted region for deployment (e.g. eastus, uksouth, brazilsouth, etc.) |
+| resourceGroup         | Name of the targeted resource group (must be a new group) |
+| storageName           | Name of the storage account to create for the logs |
+| blobConnectionName    | Name of the LogicApps API connection |
+| logicappName          | Name of the LogicApp to create |
+
+
+
 ## Sidekicks
 _Sidekicks_ are projects built for real customers with real scenarios. Microsoft's Customer Success Unit works with customers to facilitate their adoption of the cloud and remove any potential barriers. Through working with various customers, we have recognized that many customers struggle with the same pain points. The _Sidekicks_ initiative is a collection of projects that have empowered customers to move forward in their cloud journeys. 
 

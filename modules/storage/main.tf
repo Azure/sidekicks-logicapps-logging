@@ -5,7 +5,18 @@ resource "azurerm_storage_account" "logicapps" {
     account_tier             = "Standard"
     account_kind             = "StorageV2"
     account_replication_type = "ZRS"  
+    allow_blob_public_access = true
     enable_https_traffic_only = true
+}
+
+resource "azurerm_storage_container" "logicapps" {
+    name                    = "logs"
+    container_access_type   = "blob"
+    storage_account_name    = azurerm_storage_account.logicapps.name
+}
+
+output "storageName" {
+    value = azurerm_storage_account.logicapps.name
 }
 
 output "storageEndpoint" {
