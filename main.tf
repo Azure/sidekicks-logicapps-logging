@@ -42,3 +42,7 @@ module "armTemplate" {
     blobConnectionName  = var.blobConnectionName
     logicappName        = var.logicappName
 }
+
+output "logicAppUrl" {
+    value = module.armTemplate.logicAppUrl
+}

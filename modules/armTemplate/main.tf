@@ -12,3 +12,7 @@ resource "azurerm_template_deployment" "logicApps" {
 
     template_body = file("./artifacts/azurerm_template.json")
 }
+
+output "logicAppUrl" {
+    value = lookup(azurerm_template_deployment.logicApps.outputs, "logicAppUrl")
+}
