@@ -16,7 +16,7 @@ The required Terraform variables are as follows:
 | blobConnectionName    | Name of the LogicApps API connection |
 | logicappName          | Name of the LogicApp to create |
 
-
+> **NOTE:** Terraform will output the _logicAppUrl_ which will be the URL of the HTTP Trigger for the Logic App.
 
 ## Sidekicks
 _Sidekicks_ are projects built for real customers with real scenarios. Microsoft's Customer Success Unit works with customers to facilitate their adoption of the cloud and remove any potential barriers. Through working with various customers, we have recognized that many customers struggle with the same pain points. The _Sidekicks_ initiative is a collection of projects that have empowered customers to move forward in their cloud journeys. 
